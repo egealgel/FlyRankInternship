@@ -93,4 +93,5 @@ def run_notebook(nb_path):
     print(f"Successfully executed and saved outputs to {nb_path}")
 
 if __name__ == "__main__":
-    run_notebook("work/notebooks/w02_ml_task_framing.ipynb")
+    nb_target = sys.argv[1] if len(sys.argv) > 1 else "work/notebooks/w03_data_contract.ipynb"
+    run_notebook(nb_target)
