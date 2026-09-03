@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="316" viewBox="0 0 820 316">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="250" y="32" font-family="Arial" font-size="19" font-weight="bold" fill="#16232a">Why the split matters: Precision@50, random vs client-holdout</text>
+<text x="250" y="54" font-family="Arial" font-size="13" fill="#5a6670">the gap is skill the random split was faking by leaking clients across train/test</text>
+<rect x="250" y="54" width="14" height="14" fill="#c9d4db" rx="2"/>
+<text x="270" y="66" font-family="Arial" font-size="12" fill="#27343b">random row split (naive)</text>
+<rect x="420" y="54" width="14" height="14" fill="#6F4E7C" rx="2"/>
+<text x="440" y="66" font-family="Arial" font-size="12" fill="#27343b">client holdout (honest)</text>
+<text x="240" y="94" text-anchor="end" font-family="Arial" font-size="13" fill="#27343b">Logistic Regression</text>
+<rect x="280.0" y="78" width="22" height="422.4" fill="#c9d4db" rx="2"/>
+<text x="291.0" y="516.4" font-family="Arial" font-size="11" fill="#27343b">0.88</text>
+<rect x="316.0" y="78" width="22" height="345.6" fill="#6F4E7C" rx="2"/>
+<text x="327.0" y="439.6" font-family="Arial" font-size="11" fill="#27343b">0.72</text>
+<text x="240" y="142" text-anchor="end" font-family="Arial" font-size="13" fill="#27343b">Decision Tree</text>
+<rect x="400.0" y="126" width="22" height="432.0" fill="#c9d4db" rx="2"/>
+<text x="411.0" y="574.0" font-family="Arial" font-size="11" fill="#27343b">0.90</text>
+<rect x="436.0" y="126" width="22" height="268.8" fill="#6F4E7C" rx="2"/>
+<text x="447.0" y="410.8" font-family="Arial" font-size="11" fill="#27343b">0.56</text>
+<text x="240" y="190" text-anchor="end" font-family="Arial" font-size="13" fill="#27343b">Random Forest</text>
+<rect x="520.0" y="174" width="22" height="432.0" fill="#c9d4db" rx="2"/>
+<text x="531.0" y="622.0" font-family="Arial" font-size="11" fill="#27343b">0.90</text>
+<rect x="556.0" y="174" width="22" height="316.8" fill="#6F4E7C" rx="2"/>
+<text x="567.0" y="506.8" font-family="Arial" font-size="11" fill="#27343b">0.66</text>
+<text x="240" y="238" text-anchor="end" font-family="Arial" font-size="13" fill="#27343b">Hist Gradient Boosting</text>
+<rect x="640.0" y="222" width="22" height="451.2" fill="#c9d4db" rx="2"/>
+<text x="651.0" y="689.2" font-family="Arial" font-size="11" fill="#27343b">0.94</text>
+<rect x="676.0" y="222" width="22" height="345.6" fill="#6F4E7C" rx="2"/>
+<text x="687.0" y="583.6" font-family="Arial" font-size="11" fill="#27343b">0.72</text>
+</svg>

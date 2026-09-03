@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="770" height="300" viewBox="0 0 770 300">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="240" y="34" font-family="Arial" font-size="20" font-weight="bold" fill="#16232a">Precision@50 on held-out clients</text>
+<text x="240" y="56" font-family="Arial" font-size="13" fill="#5a6670">higher is better — measured on 6 clients the models never trained on</text>
+<line x1="412.0" y1="62" x2="412.0" y2="286" stroke="#b07aa1" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="418.0" y="68" font-family="Arial" font-size="12" fill="#b07aa1">test base rate 0.391</text>
+<text x="230" y="88" text-anchor="end" font-family="Arial" font-size="14" fill="#27343b">Baseline (W4 rule)</text>
+<rect x="240" y="70" width="114.4" height="26" fill="#9aa5ad" rx="4"/>
+<text x="362.4" y="88" font-family="Arial" font-size="13" font-weight="bold" fill="#16232a">0.26</text>
+<text x="230" y="128" text-anchor="end" font-family="Arial" font-size="14" fill="#27343b">Decision tree</text>
+<rect x="240" y="110" width="316.8" height="26" fill="#426B69" rx="4"/>
+<text x="564.8" y="128" font-family="Arial" font-size="13" font-weight="bold" fill="#16232a">0.72</text>
+<text x="230" y="168" text-anchor="end" font-family="Arial" font-size="14" fill="#27343b">Random forest</text>
+<rect x="240" y="150" width="246.4" height="26" fill="#426B69" rx="4"/>
+<text x="494.4" y="168" font-family="Arial" font-size="13" font-weight="bold" fill="#16232a">0.56</text>
+<text x="230" y="208" text-anchor="end" font-family="Arial" font-size="14" fill="#27343b">Logistic regression</text>
+<rect x="240" y="190" width="290.4" height="26" fill="#6F4E7C" rx="4"/>
+<text x="538.4" y="208" font-family="Arial" font-size="13" font-weight="bold" fill="#16232a">0.66</text>
+<text x="230" y="248" text-anchor="end" font-family="Arial" font-size="14" fill="#27343b">Gradient boosting</text>
+<rect x="240" y="230" width="316.8" height="26" fill="#426B69" rx="4"/>
+<text x="564.8" y="248" font-family="Arial" font-size="13" font-weight="bold" fill="#16232a">0.72</text>
+</svg>

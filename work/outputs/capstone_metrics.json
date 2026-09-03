@@ -1,0 +1,57 @@
+{
+  "rows": 30000,
+  "validated_precision_at_50_client_holdout": 0.72,
+  "comparison_table": [
+    {
+      "model": "baseline (W4 rule)",
+      "P@20": 0.5,
+      "P@50": 0.26,
+      "P@100": 0.32,
+      "ROC-AUC": 0.493,
+      "Avg precision": 0.392
+    },
+    {
+      "model": "logistic_regression",
+      "P@20": 0.7,
+      "P@50": 0.72,
+      "P@100": 0.71,
+      "ROC-AUC": 0.711,
+      "Avg precision": 0.58
+    },
+    {
+      "model": "decision_tree",
+      "P@20": 0.6,
+      "P@50": 0.56,
+      "P@100": 0.6,
+      "ROC-AUC": 0.735,
+      "Avg precision": 0.572
+    },
+    {
+      "model": "random_forest",
+      "P@20": 0.8,
+      "P@50": 0.66,
+      "P@100": 0.65,
+      "ROC-AUC": 0.735,
+      "Avg precision": 0.584
+    },
+    {
+      "model": "hist_gradient_boosting",
+      "P@20": 0.8,
+      "P@50": 0.72,
+      "P@100": 0.69,
+      "ROC-AUC": 0.721,
+      "Avg precision": 0.578
+    }
+  ],
+  "action_mix": {
+    "monitor": 11228,
+    "fix_ctr": 8402,
+    "refresh": 6338,
+    "defer": 2031,
+    "protect": 1141,
+    "optimize_snippet": 819,
+    "expand": 41
+  },
+  "label_base_rate_full": 0.5421,
+  "label_base_rate_holdout": 0.391
+}
