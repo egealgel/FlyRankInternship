@@ -1,0 +1,40 @@
+{
+  "split_improvement": [
+    {
+      "model": "logistic_regression",
+      "P@50 random split": 0.88,
+      "P@50 client holdout": 0.72,
+      "gap (fake skill)": 0.16,
+      "AUC random": 0.723,
+      "AUC holdout": 0.711
+    },
+    {
+      "model": "decision_tree",
+      "P@50 random split": 0.9,
+      "P@50 client holdout": 0.56,
+      "gap (fake skill)": 0.34,
+      "AUC random": 0.699,
+      "AUC holdout": 0.735
+    },
+    {
+      "model": "random_forest",
+      "P@50 random split": 0.9,
+      "P@50 client holdout": 0.66,
+      "gap (fake skill)": 0.24,
+      "AUC random": 0.75,
+      "AUC holdout": 0.735
+    },
+    {
+      "model": "hist_gradient_boosting",
+      "P@50 random split": 0.94,
+      "P@50 client holdout": 0.72,
+      "gap (fake skill)": 0.22,
+      "AUC random": 0.77,
+      "AUC holdout": 0.721
+    }
+  ],
+  "random_split_test_rows": 6000,
+  "client_holdout_test_rows": 2325,
+  "random_split_test_base_rate": 0.542,
+  "client_holdout_test_base_rate": 0.391
+}
