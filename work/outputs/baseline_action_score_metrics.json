@@ -1,0 +1,28 @@
+{
+  "rows": 30000,
+  "flagged_rows": 9241,
+  "precision_at_50_label": 0.66,
+  "base_rate_label": 0.5421,
+  "score_formula": {
+    "stale_gate": "days_since_last_update >= 90 (0/1)",
+    "demand": "percentile_rank(log1p(impressions_90d))",
+    "ctr_weak": "1 - min(ctr, 2) / 2",
+    "score": "stale * demand * ctr_weak"
+  },
+  "reason_code": "stale_low_ctr_demand",
+  "action_label": "refresh",
+  "signal_verdicts": {
+    "staleness_vs_decline": "MIXED",
+    "ctr_vs_decline": "CONFIRMED"
+  },
+  "leakage_check": {
+    "features_used": [
+      "impressions_90d",
+      "ctr",
+      "days_since_last_update"
+    ],
+    "label_used_as_feature": false,
+    "trend_columns_used": false,
+    "product_flags_used": false
+  }
+}
