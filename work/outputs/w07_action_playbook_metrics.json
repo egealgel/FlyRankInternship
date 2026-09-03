@@ -1,0 +1,87 @@
+{
+  "rows": 30000,
+  "validated_precision_at_50_client_holdout": 0.72,
+  "action_mix": {
+    "monitor": 11228,
+    "fix_ctr": 8402,
+    "refresh": 6338,
+    "defer": 2031,
+    "protect": 1141,
+    "optimize_snippet": 819,
+    "expand": 41
+  },
+  "top100_action_mix": {
+    "refresh": 47,
+    "fix_ctr": 36,
+    "monitor": 9,
+    "protect": 8
+  },
+  "archetype_map": [
+    {
+      "archetype": "Top-3 asset",
+      "definition": "avg_position 1-3",
+      "action": "protect",
+      "why": "already winning; verify snippet, never rewrite blindly"
+    },
+    {
+      "archetype": "Stale & visible",
+      "definition": "stale >= 90d AND impressions >= 500",
+      "action": "refresh",
+      "why": "91-180d is the highest measured decline band"
+    },
+    {
+      "archetype": "Visible, low CTR",
+      "definition": "impressions >= 500 AND ctr < 0.5%",
+      "action": "fix_ctr",
+      "why": "the model's strongest pattern: demand without clicks"
+    },
+    {
+      "archetype": "Striking distance",
+      "definition": "position 11-20 AND impressions >= 300",
+      "action": "optimize_snippet",
+      "why": "highest-ROI optimization zone (paper)"
+    },
+    {
+      "archetype": "Thin & visible",
+      "definition": "word_count < 1200 AND impressions >= 250",
+      "action": "expand",
+      "why": "thin page that already earns demand"
+    },
+    {
+      "archetype": "Deep / no clicks",
+      "definition": "clicks == 0 AND (position > 50 OR no position)",
+      "action": "defer",
+      "why": "no demand left; refresh unlikely to help"
+    },
+    {
+      "archetype": "Healthy / ambiguous",
+      "definition": "everything else",
+      "action": "monitor",
+      "why": "no clear lever"
+    }
+  ],
+  "cost_tiers": {
+    "protect": "near-zero (no content change)",
+    "refresh": "medium (content update)",
+    "fix_ctr": "low (title/snippet only)",
+    "optimize_snippet": "low (title/snippet only)",
+    "expand": "high (add sections)",
+    "defer": "near-zero (do not act)",
+    "monitor": "near-zero (do not act)"
+  },
+  "monitoring_triggers": [
+    "Precision@50 on a fresh client-holdout drops below 0.50",
+    "Decline base rate moves more than +/-10 points",
+    "Median impressions, CTR, or staleness shift > +/-25%",
+    "A new content_type or position tier appears in the data",
+    "One action label grows past ~80% of the queue",
+    "Time-based: every quarter, or after each new warehouse export"
+  ],
+  "reference_values": {
+    "validated_precision_at_50": 0.72,
+    "base_rate_full_snapshot": 0.542,
+    "median_impressions_90d": 731,
+    "median_ctr": 0.07,
+    "median_days_since_update": 20
+  }
+}
