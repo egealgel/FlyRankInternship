@@ -212,25 +212,36 @@
       <section class="abstract">
         <h2>Abstract</h2>
         <p>
-          Out of thousands of published pages, which one should a content editor
-          fix first when review time is limited? I modeled 30,000 pseudonymized
-          pages across 32 clients from the FlyRank ML Internship starter
-          release, using a trailing 90-day search-performance window. I trained
-          a logistic regression — alongside tree and gradient-boosting
-          comparators — to rank pages by a same-window "declining" proxy label,
-          validated on a client-holdout split, against a transparent
-          hand-written rule baseline. On held-out clients the baseline rule
-          ranked <em>below</em> the 39.1% base rate (Precision@50 = 0.26), while
-          logistic regression and gradient boosting each reached Precision@50 =
-          0.72, with random forest leading Precision@20 at 0.80. The result
-          feeds a human-reviewed action playbook — refresh, fix-ctr, protect,
-          expand, defer — exported as a ranked queue, with every limit stated.
+          FlyRank's content problem is concrete: pages get found in search,
+          rank, then quietly decay, and teams notice too late — so the question
+          is which of thousands of pages an editor should fix first. I modeled
+          30,000 pseudonymized pages across 32 clients from the FlyRank ML
+          Internship starter release, using a trailing 90-day search-performance
+          window. I trained a logistic regression — alongside tree and
+          gradient-boosting comparators — to rank pages by a same-window
+          "declining" proxy label, validated on a client-holdout split, against
+          a transparent hand-written rule baseline. On held-out clients the
+          baseline rule ranked <em>below</em> the 39.1% base rate (Precision@50
+          = 0.26), while logistic regression and gradient boosting each reached
+          Precision@50 = 0.72, with random forest leading Precision@20 at 0.80.
+          The result feeds a human-reviewed action playbook — refresh, fix-ctr,
+          protect, expand, defer — exported as a ranked queue for FlyRank-style
+          editorial review, with every limit stated.
         </p>
       </section>
 
       <section id="intro">
         <h2>1. Introduction / Problem</h2>
-  <p>FlyRank builds content as infrastructure: it researches, writes, and publishes pages straight into client sites, then watches search data and optimizes — the full cycle, run by algorithms and AI rather than by hand. The problem this paper attacks is the one that cycle produces: pages get found in Google search, rank, then quietly decay — rankings slip, clicks drop, and most teams notice too late. The valuable decision is <em>which page a human should fix first</em>, out of thousands.</p>
+        <p>
+          FlyRank builds content as infrastructure: it researches, writes, and
+          publishes pages straight into client sites, then watches search data
+          and optimizes — the full cycle, run by algorithms and AI rather than
+          by hand. The problem this paper attacks is the one that cycle
+          produces: pages get found in Google search, rank, then quietly decay —
+          rankings slip, clicks drop, and most teams notice too late. The
+          valuable decision is <em>which page a human should fix first</em>, out
+          of thousands.
+        </p>
         <p>
           A content team can realistically review only a few dozen pages per
           cycle, but it owns thousands. The wrong choice is expensive twice
